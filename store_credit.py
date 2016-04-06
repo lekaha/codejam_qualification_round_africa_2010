@@ -10,10 +10,9 @@ def find_two_sum(target, nums):
 def load_input(filename = None):
     if not filename:
         return
-    line_buffer = []
+    line_buffer = None
     with open(filename, 'r+') as f:
-        for line in f:
-            line_buffer.append(line)
+        line_buffer = f.read().splitlines()
     f.close()
     return line_buffer
 
